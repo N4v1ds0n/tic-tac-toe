@@ -1,0 +1,22 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+}
+
+h1, h2 {
+  color: #444;
+  text-align: center;
+}
+
+p {
+  color: #666;
+  margin: 10px 0;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
