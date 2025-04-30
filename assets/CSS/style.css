@@ -20,7 +20,38 @@ ul {
   margin: 10px 0;
   padding-left: 20px;
 }
+/* Header styles */
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #666;
+}
 
+
+/* Styles for Main section */
+main {
+  margin-top: 100px; /* Space for fixed header */
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Styles for the mode selection section */
 .mode-selection {
   display: flex;
   flex-direction: column;
@@ -74,6 +105,18 @@ ul {
   transition: transform 0.2s;
 }
 
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+}
+.scoreboard p {
+  font-size: 1.5rem;
+  color: #444;
+}
+
 /* Smooth fade-in animation */
 .fade-in {
   animation: fadeIn 0.5s ease forwards;
@@ -87,4 +130,18 @@ ul {
   to {
     opacity: 1;
   }
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  color: #666;
 }

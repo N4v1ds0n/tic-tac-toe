@@ -1,22 +1,11 @@
-let singlePlayer = false; // ✅ Track selected game mode
-
-
 // Wait until the HTML document is fully loaded before attaching event listeners
 document.addEventListener('DOMContentLoaded', function () {
     const multiPlayerButton = document.getElementById('multi-player');
-    const singlePlayerButton = document.getElementById('single-player');
 
     // Start the game when the multiplayer button is clicked
-    multiPlayerButton.addEventListener('click', function () {
-        singlePlayer = false;
-        startGame();
-    });
-
-    singlePlayerButton.addEventListener('click', function () {
-        singlePlayer = true;
-        startGame();
-    });
+    multiPlayerButton.addEventListener('click', startGame);
 });
+
 /**
  * Function to start a new Tic Tac Toe game
  * - Initializes an empty 3x3 board
@@ -32,7 +21,6 @@ function startGame() {
     const scoreboard = document.getElementById('scoreboard');
     scoreboard.style.display = 'flex'; // Show the scoreboard
     scoreboard.classList.add('fade-in'); // Trigger fade-in animation
-
     const gameBoard = document.getElementById('game-board');
     gameBoard.style.display = 'flex';
     gameBoard.classList.add('fade-in'); // Trigger fade-in animation
@@ -110,7 +98,6 @@ function playerMove(card, board, currentPlayer) {
     // Check for a win
     if (checkWin(board, currentPlayer)) {
         alert(`${currentPlayer} wins!`);
-        updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
         startGame(); // Restart the game
     }
     // Check for a draw
@@ -121,57 +108,9 @@ function playerMove(card, board, currentPlayer) {
     // Switch to the other player
     else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        if (singlePlayer && currentPlayer === 'O') {
-            setTimeout(() => {
-                randomAIMove(board, currentPlayer);
-            }, 500); // Delay AI move for user experience
-        } else {
-            renderBoard(board, currentPlayer);
-        }
+        renderBoard(board, currentPlayer); // Re-render with updated state
     }
 }
-
-/**
- * Function to make a random move for the AI player
- * - Selects a random empty cell on the board
- */
-function randomAIMove(board, player) {
-    const emptyCells = [];
-
-    for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-            if (board[i][j] === '') {
-                emptyCells.push({ row: i, col: j });
-            }
-        }
-    }
-
-    if (emptyCells.length === 0) return;
-
-    const randomIndex = Math.floor(Math.random() * emptyCells.length);
-    const { row, col } = emptyCells[randomIndex];
-
-    board[row][col] = player;
-
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        if (card.dataset.row == row && card.dataset.col == col) {
-            card.querySelector('p').innerText = player;
-        }
-    });
-
-    if (checkWin(board, player)) {
-        alert(`${player} wins!`);
-        updateScore('player2');
-        startGame();
-    } else if (checkDraw(board)) {
-        alert(`It's a draw!`);
-        startGame();
-    } else {
-        renderBoard(board, 'X'); // Back to human
-    }
-}
-
 
 
 /**
