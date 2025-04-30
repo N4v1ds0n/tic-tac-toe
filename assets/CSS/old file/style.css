@@ -41,38 +41,28 @@ header h2 {
   color: #666;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
 
 /* Styles for Main section */
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  margin-top: 100px; /* Space for fixed header */
   padding: 20px;
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 80px; /* adjust for header height */
-  margin-bottom: 80px; /* adjust for footer height */
 }
-
-/* Ensure mode selection is spaced nicely inside main */
+/* Styles for the mode selection section */
 .mode-selection {
-  margin-bottom: 2rem;
-}
-
-.mode-selection p {
-  margin: 0;
-  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
 }
 
 .mode-selection button {
-  margin: 10px auto 0;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 8px;
