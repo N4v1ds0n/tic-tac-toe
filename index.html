@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TIC Tac Toe</title>
     <link rel="stylesheet" href="./assets/CSS/style.css">
 
 </head>
@@ -22,6 +22,28 @@
             <h1>- TIC TAC TOE -</h1>
             <p>Choose your game mode:</p>
         </header>     
+
+        <!-- Main content area for the game board and mode selection-->
+        <main class="main-content">
+            <!-- Buttons to choose between Single and Multiplayer leading to respective pages-->
+            <div class="mode-selection">
+                <button id="single-player">Single Player</button>
+                <button id="multi-player">Multiplayer</button>
+            </div>
+    
+            <!-- Game board (shows after playing mode is selected) -->
+            <div class="grid" id="game-board" style="display: none; opacity: 0;">
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+                <div class="card"><p></p></div>
+              </div>
+        </main>
 
 
         <!-- Footer for the page with links to GitHub and LinkedIn-->
