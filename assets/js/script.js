@@ -54,7 +54,7 @@ function startGame() {
  * creates .card elements for each cell
  * Adds a click event to each card
  */
-function renderBoard(board, currentPlayer) {
+function renderBoard(board, currentPlayer, winningCells = []) {
     const gameBoard = document.getElementById('game-board');
     gameBoard.innerHTML = ''; // Clear any existing content in the game board
 
@@ -66,11 +66,16 @@ function renderBoard(board, currentPlayer) {
             card.dataset.row = i;
             card.dataset.col = j;
 
+            // Add winning class if this cell is part of the winning row/column/diagonal
+            if (winningCells.some(cell => cell.row === i && cell.col === j)) {
+                card.classList.add('winning-cell');
+            }
+
             const p = document.createElement('p');
             p.innerText = board[i][j];
             card.appendChild(p);
 
-            // Optional: Add click handler here if needed
+            // Add click handler for the card
             card.addEventListener('click', function () {
                 playerMove(card, board, currentPlayer);
             });
@@ -108,10 +113,14 @@ function playerMove(card, board, currentPlayer) {
     card.querySelector('p').innerText = currentPlayer;
 
     // Check for a win
-    if (checkWin(board, currentPlayer)) {
-        alert(`${currentPlayer} wins!`);
-        updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
-        startGame(); // Restart the game
+    const winningCells = checkWin(board, currentPlayer);
+    if (winningCells) {
+        renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
+    
+        setTimeout(() => {
+            alert(`${currentPlayer} wins!`);
+            startGame(); // Restart the game
+        }, 100); // Delay allows DOM to render
     }
     // Check for a draw
     else if (checkDraw(board)) {
@@ -181,23 +190,22 @@ function randomAIMove(board, player) {
 function checkWin(board, player) {
     for (let i = 0; i < 3; i++) {
         // Check rows and columns
-        if (
-            (board[i][0] === player && board[i][1] === player && board[i][2] === player) ||
-            (board[0][i] === player && board[1][i] === player && board[2][i] === player)
-        ) {
-            return true;
+        if ((board[i][0] === player && board[i][1] === player && board[i][2] === player)) {
+            return [{ row: i, col: 0 }, { row: i, col: 1 }, { row: i, col: 2 }]; // Winning row
+        }
+        if ((board[0][i] === player && board[1][i] === player && board[2][i] === player) ) {
+            return [{ row: 0, col: i }, { row: 1, col: i }, { row: 2, col: i }]; // Winning column
         }
     }
 
     // Check diagonals
-    if (
-        (board[0][0] === player && board[1][1] === player && board[2][2] === player) ||
-        (board[0][2] === player && board[1][1] === player && board[2][0] === player)
-    ) {
-        return true;
+    if (board[0][0] === player && board[1][1] === player && board[2][2] === player) {
+        return [{ row: 0, col: 0 }, { row: 1, col: 1 }, { row: 2, col: 2 }]; // Winning diagonal
     }
-
-    return false;
+    if (board[0][2] === player && board[1][1] === player && board[2][0] === player) {
+        return [{ row: 0, col: 2 }, { row: 1, col: 1 }, { row: 2, col: 0 }]; // Winning diagonal
+    }
+    return null; // No winner
 }
 
 

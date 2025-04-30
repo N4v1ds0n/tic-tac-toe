@@ -142,6 +142,12 @@ main {
   }
 }
 
+/* Style for winning cells */
+.winning-cell {
+  background-color: red !important;
+  color: white !important;
+}
+
 /* Footer styles */
 footer {
   text-align: center;
