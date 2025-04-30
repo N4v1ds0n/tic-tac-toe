@@ -115,13 +115,14 @@ function playerMove(card, board, currentPlayer) {
     // Check for a win
     const winningCells = checkWin(board, currentPlayer);
     if (winningCells) {
-        renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
-    
-        setTimeout(() => {
-            alert(`${currentPlayer} wins!`);
-            startGame(); // Restart the game
-        }, 100); // Delay allows DOM to render
-    }
+    renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
+
+    setTimeout(() => {
+        alert(`${currentPlayer} wins!`);
+        updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+        startGame(); // Restart the game
+    }, 300); // Delay allows DOM to render
+}
     // Check for a draw
     else if (checkDraw(board)) {
         alert(`It's a draw!`);
@@ -169,10 +170,15 @@ function randomAIMove(board, player) {
         }
     });
 
-    if (checkWin(board, player)) {
-        alert(`${player} wins!`);
-        updateScore('player2');
-        startGame();
+    const winningCells = checkWin(board, player);
+    if (winningCells) {
+        renderBoard(board, player, winningCells);
+
+        setTimeout(() => {
+            alert(`${player} wins!`);
+            updateScore('player2');
+            startGame();
+        }, 300);
     } else if (checkDraw(board)) {
         alert(`It's a draw!`);
         startGame();
