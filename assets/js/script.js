@@ -32,6 +32,7 @@ function startGame() {
     const scoreboard = document.getElementById('scoreboard');
     scoreboard.style.display = 'flex'; // Show the scoreboard
     scoreboard.classList.add('fade-in'); // Trigger fade-in animation
+    document.getElementById('back-to-mode').style.display = 'inline-block'; // Show the back button
 
     const gameBoard = document.getElementById('game-board');
     gameBoard.style.display = 'flex';
@@ -238,3 +239,16 @@ function updateScore(player) {
     score += 1;
     scoreDisplay.innerText = score;
 }
+
+/**
+ * Button to reset the game and return to mode selection
+ * - Hides the game board and scoreboard
+ * - Shows the mode selection buttons and description
+ */
+const backButton = document.getElementById('back-to-mode');
+backButton.addEventListener('click', function () {
+    document.querySelector('.mode-selection').style.display = 'block';
+    document.getElementById('game-board').style.display = 'none';
+    document.getElementById('scoreboard').style.display = 'none';
+    backButton.style.display = 'none';
+});
