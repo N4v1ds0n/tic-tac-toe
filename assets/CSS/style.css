@@ -1,18 +1,45 @@
+/* ROOT */ 
+/* set color palette */
+:root {
+  --primary-dark: #0B132B;                      /* rgb( 11,  19,  43) */
+  --secondary-dark: #1C2541;                    /* rgb(28, 37, 65) */
+  --primary-highlight: #6FFFE9;                 /* rgb(111, 255, 233) */
+  --secondary-highlight: #5BC0BE;               /* rgb(91,  192,  190) */
+  --medium: #3A506B;                            /* rgb(58, 80, 107) */
+}
+
+/* fonts */
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-font-bold {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 /* Global Styles */
 
+
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: black;
+  background-color: var(--primary-dark);
 }
 
 h1, h2 {
-  color: #444;
+  color: var(--primary-highlight);
   text-align: center;
 }
 
 p {
-  color: #666;
+  color: var(--secondary-highlight);
   margin: 10px 0;
 }
 
@@ -22,7 +49,7 @@ ul {
 }
 /* Header styles */
 header {
-  background-color: #f1f1f1;
+  background-color: var(--secondary-dark);
   padding: 20px;
   text-align: center;
   position: fixed;
@@ -33,12 +60,10 @@ header {
 header h1 {
   margin: 0;
   font-size: 2rem;
-  color: #333;
 }
 header h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: #666;
 }
 
 body {
@@ -54,7 +79,7 @@ main {
   justify-content: flex-start;
   padding: 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--secondary-dark);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 120px; /* adjust for header height */
@@ -78,8 +103,8 @@ main {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--medium);
+  color: var(--secondary-highlight);
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
@@ -95,7 +120,7 @@ main {
 }
 
 .card {
-  background: white;
+  background: var(--primary-dark);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -124,7 +149,7 @@ main {
 }
 .scoreboard p {
   font-size: 1.5rem;
-  color: #444;
+  color: var(--primary-highlight);
 }
 
 /* Smooth fade-in animation */
@@ -155,8 +180,8 @@ main {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #f44336; /* a red-ish tone to contrast */
-  color: white;
+  background-color: var(--medium); /* a red-ish tone to contrast */
+  color: var(--secondary-highlight);
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: background-color 0.3s;
 }
@@ -169,14 +194,14 @@ main {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: var(--secondary-dark);
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 footer p {
   margin: 0;
-  color: #666;
+  color: var(--primary-highlight);
 }
 
 /* Strategy guide styles */
@@ -184,4 +209,14 @@ footer p {
 #strategies {
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+  background-color: var(--primary-dark);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--secondary-highlight);
+}
+#strategies h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: var(--primary-highlight);
 }
