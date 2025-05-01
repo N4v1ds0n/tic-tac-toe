@@ -32,7 +32,6 @@ body {
   background-color: var(--primary-dark);
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
 
 h1, h2 {
