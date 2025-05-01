@@ -27,10 +27,12 @@
 }
 /* Global Styles */
 
-
 body {
   line-height: 1.6;
   background-color: var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 h1, h2 {
@@ -66,10 +68,6 @@ header h2 {
   font-size: 1.5rem;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
 
 /* Styles for Main section */
 main {
@@ -83,7 +81,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 120px; /* adjust for header height */
-  margin-bottom: 80px; /* adjust for footer height */
+  margin-bottom: 100px; /* adjust for footer height */
 }
 
 /* Ensure mode selection is spaced nicely inside main */
@@ -201,22 +199,5 @@ footer {
 }
 footer p {
   margin: 0;
-  color: var(--primary-highlight);
-}
-
-/* Strategy guide styles */
-
-#strategies {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--primary-dark);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: var(--secondary-highlight);
-}
-#strategies h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
   color: var(--primary-highlight);
 }
