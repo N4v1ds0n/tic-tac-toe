@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         emailjs.sendForm('service_9f3ufvb', 'template_7ibcgki', this)
             .then(function() {
-                showCustomAlert('Message sent successfully!');
+                showCustomAlert('Message sent strategyfully!');
             }, function(error) {
                 showCustomAlert('FAILED... ' + JSON.stringify(error));
         });

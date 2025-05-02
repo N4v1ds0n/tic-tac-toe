@@ -21,10 +21,9 @@
 | --- | --- | --- | --- |
 | root | [404.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/404.html) | ![screenshot](docs/testing/html/404.png) |
 | root | [about.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/about.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/about.html) | ![screenshot](docs/testing/html/about.png) |
-| root | [form.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/form.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/form.html) | ![screenshot](docs/testing/html/form.png) |
-| root | [gallery.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/gallery.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/gallery.html) | ![screenshot](docs/testing/html/gallery.png) |
+| root | [contact.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/contact.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/contact.html) | ![screenshot](docs/testing/html/form.png) |
 | root | [index.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/index.html) | ![screenshot](docs/testing/html/index.png) |
-| root | [success.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/success.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/success.html) | ![screenshot](docs/testing/html/success.png) |
+| root | [strategy.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/strategy.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://n4v1ds0n.github.io/tic-tac-toe/strategy.html) | ![screenshot](docs/testing/html/strategy.png) |
 
 
 ### CSS-validation
@@ -53,7 +52,7 @@
 | form | [form.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/form.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/form.html)| ![screenshot](docs/testing/access/form.png) |
 | gallery | [gallery.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/gallery.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/gallery.html)| ![screenshot](docs/testing/access/gallery.png) |
 | index | [index.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/index.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/index.html)| ![screenshot](docs/testing/access/index.png) |
-| success | [success.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/success.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/success.html)| ![screenshot](docs/testing/access/success.png) |
+| strategy | [strategy.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/strategy.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/strategy.html)| ![screenshot](docs/testing/access/strategy.png) |
 
 
 ## Performance
@@ -65,7 +64,7 @@
 | form | [form.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/form.html)| ![screenshot](docs/testing/perf/form.png) |
 | gallery | [gallery.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/gallery.html)| ![screenshot](docs/testing/perf/gallery.png) |
 | index | [index.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/index.html)| ![screenshot](docs/testing/perf/index.png) |
-| success | [success.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/success.html)| ![screenshot](docs/testing/perf/success.png) |
+| strategy | [strategy.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/strategy.html)| ![screenshot](docs/testing/perf/strategy.png) |
 
 ### Performing tests on various devices
 The pages were testet on:
@@ -166,7 +165,7 @@ The pages were testet on:
 |-------------|------------|---------------------|-------------------|
 | Footer | Click contact form| get to contact form | Works as expected |
 | form | use form for data input| data submitted | Works as expected |
-| success | Success page pops up | data has been submitted | Works as expected |
+| strategy | Success page pops up | data has been submitted | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/user-stories/userstory-6-1of4.png">
