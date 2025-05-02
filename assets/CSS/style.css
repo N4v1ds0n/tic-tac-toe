@@ -178,14 +178,20 @@ main {
 
 .scoreboard {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 20px auto;
-  width: 80%;
+  gap: 40px;
+  padding: 10px;
 }
 .scoreboard p {
   font-size: 1.5rem;
   color: var(--primary-highlight);
+}
+
+#turn-indicator {
+  font-size: 2rem;
+  color: var(--primary-highlight);
+  margin: 20px auto;
 }
 
 /* Smooth fade-in animation */

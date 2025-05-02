@@ -52,7 +52,9 @@ function startGame() {
     document.querySelector('.welcome').style.display = 'none';
     document.getElementById('difficulty-selection').style.display = 'none';
 
-    // Show and animate the game board andscoreboard
+    // Show and animate the game board and scoreboard
+    document.getElementById('player1-label').innerHTML = (singlePlayer ? 'Your' : 'Player 1') +' Score: <span id="player1-score">' + document.getElementById('player1-score').innerText + '</span>';
+    document.getElementById('player2-label').innerHTML = (singlePlayer ? 'Computer' : 'Player 2') + ' Score: <span id="player2-score">' + document.getElementById('player2-score').innerText + '</span>';
     const scoreboard = document.getElementById('scoreboard');
     scoreboard.style.display = 'flex'; // Show the scoreboard
     scoreboard.classList.add('fade-in'); // Trigger fade-in animation
@@ -82,7 +84,7 @@ function startGame() {
 function renderBoard(board, currentPlayer, winningCells = []) {
     const gameBoard = document.getElementById('game-board');
     gameBoard.innerHTML = ''; // Clear any existing content in the game board
-    document.getElementById('turn-indicator').innerText = `Current Turn: ${currentPlayer}`;
+    
 
     // Loop through the board array (3x3)
     for (let i = 0; i < 3; i++) {
@@ -118,6 +120,10 @@ function renderBoard(board, currentPlayer, winningCells = []) {
     // Make the board visible and apply fade-in animation if needed
     gameBoard.style.display = 'grid';
     gameBoard.classList.add('fade-in');
+    if (!singlePlayer) {
+        document.getElementById('turn-indicator').style.display = 'block';
+        document.getElementById('turn-indicator').innerText = `It's your turn Player ${currentPlayer}`;
+    }
 }
 
 
@@ -148,10 +154,17 @@ function playerMove(card, board, currentPlayer) {
     if (winningCells) {
         renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
         setTimeout(() => {
-            showCustomAlert(`${currentPlayer} wins!`, () => {
-                updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
-                startGame();
-            });
+            if (singlePlayer) {
+                showCustomAlert(`You win!`, () => {
+                    updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+                    startGame();
+                });
+            } else {
+                showCustomAlert(`${currentPlayer} wins!`, () => {
+                    updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+                    startGame();
+                });
+            }
         }, 300); // Delay allows DOM to render
     }
     // Check for a draw
@@ -217,7 +230,7 @@ function randomAIMove(board, player) {
         renderBoard(board, player, winningCells);
 
         setTimeout(() => {
-            showCustomAlert(`${currentPlayer} wins!`, () => {
+            showCustomAlert(`Computer wins!`, () => {
                 updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
                 startGame();
             });
@@ -251,7 +264,7 @@ function smartAIMove(board, player) {
     if (winningCells) {
         renderBoard(board, player, winningCells);
         setTimeout(() => {
-            showCustomAlert(`${player} wins!`, () => {
+            showCustomAlert(`Computer wins!`, () => {
                 updateScore(player === 'X' ? 'player1' : 'player2');
                 startGame();
             });
@@ -372,11 +385,12 @@ const backButton = document.getElementById('back-to-mode');
 backButton.addEventListener('click', function () {
     document.querySelector('.mode-selection').style.display = 'block';
     document.getElementById('difficulty-selection').style.display = 'none';
+    document.getElementById('turn-indicator').style.display = 'none';
     document.querySelector('.welcome').style.display = 'block';
     document.getElementById('game-board').style.display = 'none';
     document.getElementById('scoreboard').style.display = 'none';
     document.getElementById('player1-score').innerText = '0';
     document.getElementById('player2-score').innerText = '0';
-    
+    document.getElementById('computer-score').innerText = '0';
     backButton.style.display = 'none';
 });
