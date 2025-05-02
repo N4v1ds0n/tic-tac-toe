@@ -73,6 +73,32 @@ header h2 {
   font-size: 1.5rem;
 }
 
+/* navbar section */
+#navbar {                                                           /* adjust navbar color to color scheme */
+  background-color: var(--secondary-dark);    
+  color: var(--secondary-highlight);
+}
+
+#navbar .nav-link {                                                 /* text color for the links */
+  color: var(--secondary-highlight);  
+}
+
+#navbar .nav-link:hover {                                           /* change color on hover */
+  color: var(--primary-highlight);  
+}
+
+#navbar .navbar-brand {                                             /* set navbar logo to left side */
+  margin-right: auto;   
+}
+#navbar .logo {                                                     /* set size of the navbar logo */
+  height: 40px;       
+}
+
+.navbar-title {                                                     /* center navbar title */
+  flex: 1;
+  text-align: center;
+}
+
 
 /* Styles for Main section */
 main {
