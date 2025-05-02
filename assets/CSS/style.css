@@ -85,7 +85,7 @@ main {
   background-color: var(--secondary-dark);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 125px 10px 100px; /* 125px for header, 100px for footer */
+  margin: 76px 10px 90px; /* 125px for header, 100px for footer */
 }
 
 /* Ensure mode selection is spaced nicely inside main */
