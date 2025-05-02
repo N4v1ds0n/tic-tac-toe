@@ -32,9 +32,9 @@
     </head>
 <body>
     <!-- Header Section-->
-    <header class="header roboto-font">
+    <header class="header roboto-font" role="banner">
         <!-- Navigation -->
-        <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" role="navigation" aria-label="Main Navigation">
             <div class="container-fluid">
               
                 <!--Logo-->
@@ -79,24 +79,24 @@
     </header> 
 
     <!-- Main content area for the about section-->
-    <main>
-        <section id="error-message" class="roboto-font">
-            <h1>Ooops, something went wrong!</h1>
+    <main role="main">
+        <section id="error-message" class="roboto-font" aria-labelledby="error-heading">
+            <h1 id="error-heading">Ooops, something went wrong!</h1>
             <p>
               The page you were looking for does not exist, or has been misplaced.
-              please use the navigation to get back to where you started.
+              Please use the navigation to get back to where you started.
     
               <strong>We are sorry for the confusion.</strong>
             </p>
           </section>
     </main>
     <!-- Footer Section-->
-    <footer class="footer roboto-font">
+    <footer class="footer roboto-font" role="contentinfo">
         <p>Created by n4v1ds0n</p>
         <div class="social-links">
             <a href="https://github.com/N4v1ds0n" target="_blank" aria-label="Visit my Github (opens in a new tab)" rel="noopener"><i class="fa-brands fa-square-github"></i></a>
             <a href="https://www.linkedin.com/in/damian-droste-100378172" target="_blank" aria-label="Visit my LinkedIn profile (opens in a new tab)" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="./contact.html" id="contact-link">Contact Us</a>
+            <a href="./contact.html" id="contact-link" aria-label="Contact us page link">Contact Us</a>
         </div>
     </footer>
     <!-- Font Awesome kit-->

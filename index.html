@@ -32,7 +32,7 @@
 </head>
     <body>
         <!-- Header Section-->
-        <header class="header roboto-font">
+        <header class="header roboto-font" role="banner">
             <!-- Navigation -->
             <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
                 <div class="container-fluid">
@@ -76,21 +76,21 @@
         </header>     
 
         <!-- Main content area for the game board and mode selection-->
-        <main class="main-content roboto-font">
+        <main class="main-content roboto-font" role="main">
             
             <h2 class="welcome">Let's play a game!</h2>
 
             <!-- Buttons to choose between Single and Multiplayer leading to respective pages-->
             <div class="mode-selection">
                 <p>Choose your game mode:</p>
-                <button id="single-player">Single Player</button>
-                <button id="multi-player">Multiplayer</button>
+                <button id="single-player" aria-label="Start a single player game">Single Player</button>
+                <button id="multi-player" aria-label="Start a multiplayer game">Multiplayer</button>
             </div>
             <div id="difficulty-selection" style="display: none;">
                 <p>Select difficulty:</p>
-                <button id="easy-mode">Easy</button>
-                <button id="medium-mode">Medium</button>
-                <button id="hard-mode">Hard</button>
+                <button id="easy-mode" aria-label="Play in easy difficulty">Easy</button>
+                <button id="medium-mode" aria-label="Play in medium difficulty">Medium</button>
+                <button id="hard-mode" aria-label="Play in hard difficulty">Hard</button>
             </div>
            
             
@@ -106,24 +106,24 @@
                 <p class="scores" id="player1-label">Player 1 Score: <span id="player1-score">0</span></p>
                 <p class="scores" id="player2-label">Player 2 Score: <span id="player2-score">0</span></p>
             </div>
-            <button id="back-to-mode" style="display: none;">Back to Mode Selection</button>            
+            <button id="back-to-mode" aria-label="Go back to game mode selection" style="display: none;">Back to Mode Selection</button>            
         </main>
         
         <!-- a custom alert window that looks nicer than the default -->
-        <div id="game-alert" class="game-alert hidden">
+        <div id="game-alert" class="game-alert hidden" role="alertdialog" aria-labelledby="alert-message" aria-modal="true">
             <div class="game-alert-content">
               <p id="alert-message"></p>
-              <button id="alert-ok">OK</button>
+              <button id="alert-ok" aria-label="Close alert">OK</button>
             </div>
           </div>
 
         <!-- Footer Section-->
-        <footer class="footer roboto-font">
+        <footer class="footer roboto-font" role="contentinfo">
         <p>Created by n4v1ds0n</p>
         <div class="social-links">
             <a href="https://github.com/N4v1ds0n" target="_blank" aria-label="Visit my Github (opens in a new tab)" rel="noopener"><i class="fa-brands fa-square-github"></i></a>
             <a href="https://www.linkedin.com/in/damian-droste-100378172" target="_blank" aria-label="Visit my LinkedIn profile (opens in a new tab)" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="./contact.html" id="contact-link">Contact Us</a>
+            <a href="./contact.html" id="contact-link" aria-label="Contact us page link">Contact Us</a>
         </div>
         </footer>
 

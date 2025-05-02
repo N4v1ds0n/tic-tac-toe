@@ -32,7 +32,7 @@
     </head>
 <body>
     <!-- Header Section-->
-    <header class="header roboto-font">
+    <header class="header roboto-font" role="banner">
         <!-- Navigation bar-->
         <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
@@ -76,10 +76,10 @@
     </header> 
 
     <!-- Main content area for the strategy guide-->
-    <main class="roboto-font">
+    <main class="roboto-font" role="main">
         <section>
-            <div id="strategies">
-                <h1>Tic-Tac-Toe Strategy Guide</h1>
+            <div id="strategies" aria-labelledby="strategies-heading">
+                <h1 id="strategies-heading">Tic-Tac-Toe Strategy Guide</h1>
                 <p>Master the game of Tic-Tac-Toe with these simple strategies and tips!</p>
                 <hr>
                 <h2>1. Start in the Center</h2>
@@ -104,12 +104,12 @@
         </section>
     </main>
     <!-- Footer Section-->
-    <footer class="footer roboto-font">
+    <footer class="footer roboto-font" role="contentinfo">
         <p>Created by n4v1ds0n</p>
         <div class="social-links">
             <a href="https://github.com/N4v1ds0n" target="_blank" aria-label="Visit my Github (opens in a new tab)" rel="noopener"><i class="fa-brands fa-square-github"></i></a>
             <a href="https://www.linkedin.com/in/damian-droste-100378172" target="_blank" aria-label="Visit my LinkedIn profile (opens in a new tab)" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="./contact.html" id="contact-link">Contact Us</a>
+            <a href="./contact.html" id="contact-link" aria-label="Contact us page link">Contact Us</a>
         </div>
     </footer>
     <!-- Font Awesome kit-->
