@@ -35,7 +35,6 @@
                 <a href="strategy.html">Strategy Guide</a>
             </div>
         </nav>
-        <h1>- TIC TAC TOE -</h1>
     </header>
 
     <!-- Main content area for the about section-->
@@ -47,20 +46,23 @@
                 <input type="email" name="reply_to" placeholder="Your Email" required><br><br>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
                 <button type="submit">Send Message</button>
-              </form>
-          </section>
+            </form>
+        </section>
+        <section>
+            <!-- a custom alert window that looks nicer than the default -->
+            <div id="send-alert" class="send-alert roboto-font hidden">
+                <div class="send-alert-content">
+                    <p id="alert-message"></p>
+                    <button id="alert-ok">OK</button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- a custom alert window that looks nicer than the default -->
-    <div id="send-alert" class="send-alert hidden">
-        <div class="send-alert-content">
-          <p id="alert-message"></p>
-          <button id="alert-ok">OK</button>
-        </div>
-      </div>
+    
 
     <!-- Footer Section-->
-    <footer class="footer">
+    <footer class="footer roboto-font">
         <p>Created by n4v1ds0n</p>
         <div class="social-links">
             <a href="https://github.com/N4v1ds0n" target="_blank" aria-label="Visit my Github (opens in a new tab)" rel="noopener"><i class="fa-brands fa-square-github"></i></a>
