@@ -1,4 +1,5 @@
 let singlePlayer = false; // Track selected game mode
+let aiDifficulty = 'easy'; // Default AI difficulty
 
 
 // Wait until the HTML document is fully loaded before attaching event listeners
@@ -14,9 +15,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     singlePlayerButton.addEventListener('click', function () {
         singlePlayer = true;
+        document.querySelector('.mode-selection').style.display = 'none';
+        document.getElementById('difficulty-selection').style.display = 'block';
+    });
+
+    // Difficulty selection
+    document.getElementById('easy-mode').addEventListener('click', function () {
+        aiDifficulty = 'easy';
+        document.getElementById('difficulty-selection').style.display = 'none';
+        startGame();
+    });
+
+    document.getElementById('hard-mode').addEventListener('click', function () {
+        aiDifficulty = 'hard';
+        document.getElementById('difficulty-selection').style.display = 'none';
         startGame();
     });
 });
+
 /**
  * Function to start a new Tic Tac Toe game
  * - Initializes an empty 3x3 board
@@ -28,6 +44,7 @@ function startGame() {
     // Hide the mode selection buttons and description
     document.querySelector('.mode-selection').style.display = 'none';
     document.querySelector('.welcome').style.display = 'none';
+    document.getElementById('difficulty-selection').style.display = 'none';
 
     // Show and animate the game board andscoreboard
     const scoreboard = document.getElementById('scoreboard');
@@ -117,15 +134,14 @@ function playerMove(card, board, currentPlayer) {
     // Check for a win
     const winningCells = checkWin(board, currentPlayer);
     if (winningCells) {
-    renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
-
-    setTimeout(() => {
-        showCustomAlert(`${currentPlayer} wins!`, () => {
-            updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
-            startGame();
-        });
-    }, 300); // Delay allows DOM to render
-}
+        renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
+        setTimeout(() => {
+            showCustomAlert(`${currentPlayer} wins!`, () => {
+                updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+                startGame();
+            });
+        }, 300); // Delay allows DOM to render
+    }
     // Check for a draw
     else if (checkDraw(board)) {
         showCustomAlert(`It's a draw!`, () => {
@@ -137,8 +153,12 @@ function playerMove(card, board, currentPlayer) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         if (singlePlayer && currentPlayer === 'O') {
             setTimeout(() => {
-                randomAIMove(board, currentPlayer);
-            }, 500); // Delay AI move for user experience
+                if (aiDifficulty === 'easy') {
+                    randomAIMove(board, currentPlayer);
+                } else {
+                    smartAIMove(board, currentPlayer);
+                }
+            }, 500);
         } else {
             renderBoard(board, currentPlayer);
         }
@@ -193,7 +213,69 @@ function randomAIMove(board, player) {
     }
 }
 
+/**
+ * Function to make a smart move for the AI player using Minimax algorithm
+ * - Evaluates the board and selects the best move
+ * - Updates the board and UI
+ */
+function smartAIMove(board, player) {
+    const bestMove = minimax(board, player).move;
+    board[bestMove.row][bestMove.col] = player;
 
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        if (card.dataset.row == bestMove.row && card.dataset.col == bestMove.col) {
+            card.querySelector('p').innerText = player;
+        }
+    });
+
+    const winningCells = checkWin(board, player);
+    if (winningCells) {
+        renderBoard(board, player, winningCells);
+        setTimeout(() => {
+            showCustomAlert(`${player} wins!`, () => {
+                updateScore(player === 'X' ? 'player1' : 'player2');
+                startGame();
+            });
+        }, 300);
+    } else if (checkDraw(board)) {
+        showCustomAlert(`It's a draw!`, () => {
+            startGame();
+        });
+    } else {
+        renderBoard(board, 'X'); // Back to human
+    }
+}
+
+/**
+ * Minimax algorithm to find the best move for the AI player 
+ * - Recursively evaluates all possible moves
+ * - Returns the best move and its score
+ */
+function minimax(board, player) {
+    const opponent = player === 'X' ? 'O' : 'X';
+    const winner = checkWin(board, 'X') ? 'X' : checkWin(board, 'O') ? 'O' : null;
+
+    if (winner === player) return { score: 1 };
+    if (winner === opponent) return { score: -1 };
+    if (checkDraw(board)) return { score: 0 };
+
+    let moves = [];
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (board[i][j] === '') {
+                board[i][j] = player;
+                const result = minimax(board, opponent);
+                moves.push({ row: i, col: j, score: -result.score });
+                board[i][j] = '';
+            }
+        }
+    }
+
+    moves.sort((a, b) => b.score - a.score); // maximize
+    return { move: moves[0], score: moves[0].score };
+}
 
 /**
  * Check if the current player has won the game after a move
@@ -271,8 +353,10 @@ function updateScore(player) {
 const backButton = document.getElementById('back-to-mode');
 backButton.addEventListener('click', function () {
     document.querySelector('.mode-selection').style.display = 'block';
+    document.getElementById('difficulty-selection').style.display = 'none';
     document.querySelector('.welcome').style.display = 'block';
     document.getElementById('game-board').style.display = 'none';
     document.getElementById('scoreboard').style.display = 'none';
+    
     backButton.style.display = 'none';
 });
