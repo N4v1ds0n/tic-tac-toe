@@ -231,7 +231,7 @@ function randomAIMove(board, player) {
 
         setTimeout(() => {
             showCustomAlert(`Computer wins!`, () => {
-                updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+                updateScore(player === 'X' ? 'player1' : 'player2');
                 startGame();
             });
         }, 300);
