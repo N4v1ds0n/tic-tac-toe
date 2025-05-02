@@ -82,6 +82,7 @@ function startGame() {
 function renderBoard(board, currentPlayer, winningCells = []) {
     const gameBoard = document.getElementById('game-board');
     gameBoard.innerHTML = ''; // Clear any existing content in the game board
+    document.getElementById('turn-indicator').innerText = `Current Turn: ${currentPlayer}`;
 
     // Loop through the board array (3x3)
     for (let i = 0; i < 3; i++) {
@@ -90,6 +91,11 @@ function renderBoard(board, currentPlayer, winningCells = []) {
             card.classList.add('card');
             card.dataset.row = i;
             card.dataset.col = j;
+        
+            if (board[i][j] !== '') {
+                card.classList.add('filled');
+                card.style.pointerEvents = 'none';
+            }
 
             // Add winning class if this cell is part of the winning row/column/diagonal
             if (winningCells.some(cell => cell.row === i && cell.col === j)) {
@@ -369,6 +375,8 @@ backButton.addEventListener('click', function () {
     document.querySelector('.welcome').style.display = 'block';
     document.getElementById('game-board').style.display = 'none';
     document.getElementById('scoreboard').style.display = 'none';
+    document.getElementById('player1-score').innerText = '0';
+    document.getElementById('player2-score').innerText = '0';
     
     backButton.style.display = 'none';
 });
