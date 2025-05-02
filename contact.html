@@ -84,23 +84,19 @@
             <h1 id="contact-heading">Contact Us</h1>
             <p>If you have any questions or suggestions, we'd love to hear from you! Fill out the form below:</p>
             <form id="contact-form" aria-labelledby="contact-heading">
-                <fieldset>
-                    <legend>Contact Information</legend>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="from_name">Name</label><br>
-                            <input type="text" id="from_name" name="from_name" placeholder="Your Name" required><br><br>
-                            <label for="reply_to">Email</label><br>
-                            <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required><br><br>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label><br>
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
-                        </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="from_name">Name</label><br>
+                        <input type="text" id="from_name" name="from_name" placeholder="Your Name" required><br><br>
+                        <label for="reply_to">Email</label><br>
+                        <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required><br><br>
                     </div>
-                    <button type="submit" aria-label="Send your message">Send Message</button>
-                </fieldset>
-                
+                    <div class="form-group">
+                        <label for="message">Message</label><br>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
+                    </div>
+                </div>
+                <button type="submit" aria-label="Send your message">Send Message</button>                
             </form>
         </section>
         <!-- a custom alert window that looks nicer than the default -->
