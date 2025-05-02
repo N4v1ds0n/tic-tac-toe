@@ -134,7 +134,7 @@ main {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: var(--medium);
+  background-color: var(--primary-dark);
   color: var(--secondary-highlight);
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
