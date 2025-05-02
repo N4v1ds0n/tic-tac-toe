@@ -49,6 +49,10 @@ p {
   color: var(--secondary-highlight);
   margin: 10px 0;
 }
+hr {                                                  
+  border-top: 3px solid var(--secondary-highlight);
+  margin: 5px 0;
+}
 
 ul {
   margin: 10px 0;
