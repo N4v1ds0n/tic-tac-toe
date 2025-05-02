@@ -352,3 +352,14 @@ form button {
 form button:hover {
   background-color: var(--primary-dark);
 }
+
+/* Media query: lg (992px and up) */
+@media screen and (min-width: 992px) {
+
+  /* navbar */
+  .navbar-title {                                                                     /* keep navbar title centered */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
