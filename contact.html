@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A simple Tic Tac Toe game with single and multiplayer modes.">
+        <meta name="keywords" content="Tic Tac Toe, Game, JavaScript, HTML, CSS">
+        <meta name="author" content="n4v1ds0n">
+        <title>Contact form</title>
+            
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+        
+        <!-- Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="icon" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="android-chrome" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png">
+        <link rel="android-chrome" sizes="512x512" href="./assets/favicon/android-chrome-512x512.png">
+    
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="./assets/CSS/style.css">
+    
+    </head>
+<body>
+    <!-- Header Section-->
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="navbar">    
+            <div class="container">
+                <a href="index.html">Play</a>
+                <a href="about.html">About</a>
+                <a href="strategy.html">Strategy Guide</a>
+            </div>
+        </nav>
+        <h1>- TIC TAC TOE -</h1>
+    </header>
+
+    <!-- Main content area for the about section-->
+    <main>
+        <section id="error-message">
+            <p>We'd love to hear from you! Fill out the form below:</p>
+            <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Your Name" required><br><br>
+                <input type="email" name="reply_to" placeholder="Your Email" required><br><br>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+              </form>
+          </section>
+    </main>
+
+    <!-- a custom alert window that looks nicer than the default -->
+    <div id="send-alert" class="send-alert hidden">
+        <div class="send-alert-content">
+          <p id="alert-message"></p>
+          <button id="alert-ok">OK</button>
+        </div>
+      </div>
+
+    <!-- Footer Section-->
+    <footer class="footer">
+        <p>Created by n4v1ds0n</p>
+        <div class="social-links">
+             <a href="https://github.com/YourProfile" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/YourProfile" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- EmailJS script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- custom script -->
+    <script src="./assets/js/contact.js"></script>
+</body>
+</html>

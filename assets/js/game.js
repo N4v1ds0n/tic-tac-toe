@@ -1,4 +1,4 @@
-let singlePlayer = false; // ✅ Track selected game mode
+let singlePlayer = false; // Track selected game mode
 
 
 // Wait until the HTML document is fully loaded before attaching event listeners
