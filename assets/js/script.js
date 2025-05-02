@@ -119,15 +119,17 @@ function playerMove(card, board, currentPlayer) {
     renderBoard(board, currentPlayer, winningCells); // Highlight the winning cells
 
     setTimeout(() => {
-        alert(`${currentPlayer} wins!`);
-        updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
-        startGame(); // Restart the game
+        showCustomAlert(`${currentPlayer} wins!`, () => {
+            updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+            startGame();
+        });
     }, 300); // Delay allows DOM to render
 }
     // Check for a draw
     else if (checkDraw(board)) {
-        alert(`It's a draw!`);
-        startGame(); // Restart the game
+        showCustomAlert(`It's a draw!`, () => {
+            startGame();
+        });
     }
     // Switch to the other player
     else {
@@ -176,13 +178,15 @@ function randomAIMove(board, player) {
         renderBoard(board, player, winningCells);
 
         setTimeout(() => {
-            alert(`${player} wins!`);
-            updateScore('player2');
-            startGame();
+            showCustomAlert(`${currentPlayer} wins!`, () => {
+                updateScore(currentPlayer === 'X' ? 'player1' : 'player2');
+                startGame();
+            });
         }, 300);
     } else if (checkDraw(board)) {
-        alert(`It's a draw!`);
-        startGame();
+        showCustomAlert(`It's a draw!`, () => {
+            startGame();
+        });
     } else {
         renderBoard(board, 'X'); // Back to human
     }
@@ -228,6 +232,24 @@ function checkDraw(board) {
     }
     return true;
 }
+
+/**
+ * function to show a custom win or draw alert message
+ */
+function showCustomAlert(message, callback) {
+    const alertBox = document.getElementById('game-alert');
+    const alertMessage = document.getElementById('alert-message');
+    const alertOk = document.getElementById('alert-ok');
+
+    alertMessage.innerText = message;
+    alertBox.classList.remove('hidden');
+
+    alertOk.onclick = function () {
+        alertBox.classList.add('hidden');
+        if (callback) callback();
+    };
+}
+
 
 /**
  * function to increase score of winning player
