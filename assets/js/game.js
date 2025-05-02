@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function startGame() {
     // Hide the mode selection buttons and description
     document.querySelector('.mode-selection').style.display = 'none';
+    document.querySelector('.welcome').style.display = 'none';
 
     // Show and animate the game board andscoreboard
     const scoreboard = document.getElementById('scoreboard');
@@ -270,6 +271,7 @@ function updateScore(player) {
 const backButton = document.getElementById('back-to-mode');
 backButton.addEventListener('click', function () {
     document.querySelector('.mode-selection').style.display = 'block';
+    document.querySelector('.welcome').style.display = 'block';
     document.getElementById('game-board').style.display = 'none';
     document.getElementById('scoreboard').style.display = 'none';
     backButton.style.display = 'none';
