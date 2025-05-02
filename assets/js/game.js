@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
         startGame();
     });
 
+    document.getElementById('medium-mode').addEventListener('click', function () {
+        aiDifficulty = 'medium';
+        document.getElementById('difficulty-selection').style.display = 'none';
+        startGame();
+    });
+
     document.getElementById('hard-mode').addEventListener('click', function () {
         aiDifficulty = 'hard';
         document.getElementById('difficulty-selection').style.display = 'none';
@@ -155,9 +161,15 @@ function playerMove(card, board, currentPlayer) {
             setTimeout(() => {
                 if (aiDifficulty === 'easy') {
                     randomAIMove(board, currentPlayer);
-                } else {
+                } else if (aiDifficulty === 'hard') {
                     smartAIMove(board, currentPlayer);
-                }
+                } else if (aiDifficulty === 'medium') {
+                    if (Math.random() < 0.5) {             // 50% chance to make a mistake and move completely random
+                        randomAIMove(board, currentPlayer);
+                    } else {
+                        smartAIMove(board, currentPlayer);
+                    }
+                } 
             }, 500);
         } else {
             renderBoard(board, currentPlayer);
