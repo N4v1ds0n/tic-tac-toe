@@ -96,30 +96,22 @@ The pages were testet on:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Luthier-section | On home page, scroll down to luthier-section | I learn about luthier story and background | Works as expected |
-| navbar | Toggle navbar, go to gallery section | get to gallery section | Works as expected |
-| Gallery | view gallery pictures | see luthiers previous work | Works as expected |
+| Difficulty Selection | After choosing single player mode, click easy medium or hard button | start a game with respective difficulty | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-2-1of4.png">
-<img src="docs/user-stories/userstory-2-2of4.png">
-<img src="docs/user-stories/userstory-2-3of4.png">
-<img src="docs/user-stories/userstory-2-4of4.png">
+<img src="docs/user-stories/userstory-2-1of2.png">
+<img src="docs/user-stories/userstory-2-2of2.png">
 </details>
 
 3. As a user, I want to play with a friend.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| navbar | Toggle navbar, go to gallery section | get to gallery section | Works as expected |
-| Gallery | view gallery pictures | see luthiers previous work | Works as expected |
-| Gallery | listen to sound samples | hear guitar quality | Works as expected |
+| Multi Player with Turn-Based Gameplay | In mode selection click multiplayer | start a multiplayer game | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-3-1of4.png">
-<img src="docs/user-stories/userstory-3-2of4.png">
-<img src="docs/user-stories/userstory-3-3of4.png">
-<img src="docs/user-stories/userstory-3-4of4.png">
+<img src="docs/user-stories/userstory-3-1of2.png">
+<img src="docs/user-stories/userstory-3-2of2.png">
 </details>
 
 4. As a user, I want to track my wins.
@@ -134,12 +126,8 @@ The pages were testet on:
 | Hardware-section | On workshop page, scroll down to hardware-section | I learn about hardware | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-4-1of6.png">
-<img src="docs/user-stories/userstory-4-2of6.png">
-<img src="docs/user-stories/userstory-4-3of6.png">
-<img src="docs/user-stories/userstory-4-4of6.png">
-<img src="docs/user-stories/userstory-4-5of6.png">
-<img src="docs/user-stories/userstory-4-6of6.png">
+<img src="docs/user-stories/userstory-4-1of2.png">
+<img src="docs/user-stories/userstory-4-2of2.png">
 </details>
 
 5. As a user, I want to know how to improve at the game.
@@ -149,7 +137,7 @@ The pages were testet on:
 | navbar | Toggle navbar, go to any page| get to workshop section | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-5-1of1.png">
+<img src="docs/user-stories/userstory-5.png">
 </details>
 
 6. As a user I want to learn about the premise of the game app.
@@ -161,38 +149,38 @@ The pages were testet on:
 | strategy | Success page pops up | data has been submitted | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-6-1of4.png">
-<img src="docs/user-stories/userstory-6-2of4.png">
-<img src="docs/user-stories/userstory-6-3of4.png">
-<img src="docs/user-stories/userstory-6-4of4.png">
+<img src="docs/user-stories/userstory-6.png">
 </details>
 
 7. As a user, I want to share feedback or contact the creator.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | scroll to footer | get to contact information | Works as expected |
+| Footer | click Contact us | Get to contact form | Works as expected |
+| Contact Form | Enter information and click submit | receive confirmation message | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-7-1of1.png">
+<img src="docs/user-stories/userstory-7-1of3.png">
+<img src="docs/user-stories/userstory-7-2of3.png">
+<img src="docs/user-stories/userstory-7-3of3.png">
 </details>
 
 8. As the site owner, I want users to give feedback on the site
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | Click contact form | get redirected to 404 page | Works as expected |
+| Contact Form| User submits information | emailjs sends message to site owner | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-8-1of1.png">
+No screenshots available.
 </details>
 
 9. As the site owner, I want to provide my contact information to visitors interested in my work
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | Click contact form| get to contact form | Works as expected |
+| Footer | Click github or linkedin icon| Get to site owners profiles | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/user-stories/userstory-9-1of1.png">
+<img src="docs/user-stories/userstory-9.png">
 </details>
