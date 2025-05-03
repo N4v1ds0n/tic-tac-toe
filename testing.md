@@ -50,8 +50,7 @@
 | --- | --- | --- | --- |
 | 404 | [404.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/404.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/404)| ![screenshot](docs/testing/access/404.png) |
 | about | [about.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/about.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/about.html)| ![screenshot](docs/testing/access/about.png) |
-| form | [form.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/form.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/form.html)| ![screenshot](docs/testing/access/form.png) |
-| gallery | [gallery.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/gallery.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/gallery.html)| ![screenshot](docs/testing/access/gallery.png) |
+| contact| [contact.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/contact.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/contact.html)| ![screenshot](docs/testing/access/contact.png) |
 | index | [index.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/index.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/index.html)| ![screenshot](docs/testing/access/index.png) |
 | strategy | [strategy.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/strategy.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/strategy.html)| ![screenshot](docs/testing/access/strategy.png) |
 
@@ -62,8 +61,7 @@
 | --- | --- | --- |
 | 404 | [404.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/404.html)| ![screenshot](docs/testing/perf/404.png) |
 | about | [about.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/about.html)| ![screenshot](docs/testing/perf/about.png) |
-| form | [form.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/form.html)| ![screenshot](docs/testing/perf/form.png) |
-| gallery | [gallery.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/gallery.html)| ![screenshot](docs/testing/perf/gallery.png) |
+| contact | [contact.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/contact.html)| ![screenshot](docs/testing/perf/contact.png) |
 | index | [index.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/index.html)| ![screenshot](docs/testing/perf/index.png) |
 | strategy | [strategy.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/strategy.html)| ![screenshot](docs/testing/perf/strategy.png) |
 
