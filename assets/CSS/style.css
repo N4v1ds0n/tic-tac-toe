@@ -275,6 +275,8 @@ main {
   background-color: var(--primary-dark);
 }
 
+
+
 /* Footer styles */
 footer {
   padding: 20px;
@@ -380,12 +382,12 @@ label {
 @media (min-width: 768px) {
   .form-row {
       flex-direction: row;
+      gap: 2rem;
   }
 
   .form-group {
       max-width: 70%;
-  }
-
+  }  
 }
 
 /* Media query: large (992px and up) */
@@ -396,5 +398,19 @@ label {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+  }
+
+  #strategy-guide {                                                   /* center strategy guide button */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact, 
+  #error-message,
+  #about-game,
+  #strategies{
+      width: 50%; /* set width to 50% for larger screens */
+      align-self: center; /* center the content */
   }
 }
