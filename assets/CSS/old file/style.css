@@ -116,6 +116,18 @@ main {
   margin: 76px 10px 90px; /* 125px for header, 100px for footer */
 }
 
+/* Styles for the game board */
+/* Ensure main section is responsive and centered */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* max width for larger screens */
+  margin: auto;      /* center the main content */
+}
+
 /* Ensure mode selection is spaced nicely inside main */
 .mode-selection {
   margin-bottom: 2rem;
@@ -143,8 +155,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  /* 3 columns */
   grid-template-rows: repeat(3, 1fr);     /* 3 rows */
-  width: 58vmin;                          /* keep board square */
-  height: 58vmin;
+  width: 90vmin;                          /* keep board square */
+  height: 90vmin;
   margin: 2rem auto;
   gap: 1vmin;                             /* spacing between cards */
   opacity: 0;  
@@ -160,7 +172,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11vmin; /* size of the card */
+  font-size: 4rem;
   aspect-ratio: 1 / 1; /* force square */
 }
 
@@ -385,7 +397,6 @@ label {
   .form-group {
       max-width: 70%;
   }
-
 }
 
 /* Media query: large (992px and up) */
