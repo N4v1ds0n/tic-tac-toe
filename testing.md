@@ -38,15 +38,15 @@
 
 [JShint Validator](https://jshint.com/) was used to validate JavaScript scripts.
 
-| Directory | File | Screenshot | Notes |
-| --- | --- | --- | --- |
-| assets | [contact.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/contact.js) | ![screenshot](docs/testing/js/contact.png) | emailjs is called in  |
-| assets | [game.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/game.js) | ![screenshot_1](docs/testing/js/game-1.png), ![screenshot_2](docs/testing/js/game-2.png), ![screenshot_3](docs/testing/js/game-3.png) | - |
+| Directory | File | Screenshot |
+| --- | --- | --- |
+| assets | [contact.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/contact.js) | ![screenshot](docs/testing/js/contact.png) |
+| assets | [game.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/game.js) | ![screenshot_1](docs/testing/js/game-1.png), ![screenshot_2](docs/testing/js/game-2.png), ![screenshot_3](docs/testing/js/game-3.png) |
 
 
 ## Accessibility
 
-| Page | File |  Screenshot |
+| Page | File | URL | Screenshot |
 | --- | --- | --- | --- |
 | 404 | [404.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/404.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/404)| ![screenshot](docs/testing/access/404.png) |
 | about | [about.html](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/about.html)| [WAVE Report](https://wave.webaim.org/report#/https://n4v1ds0n.github.io/tic-tac-toe/about.html)| ![screenshot](docs/testing/access/about.png) |
