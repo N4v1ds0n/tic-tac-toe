@@ -165,7 +165,7 @@ The pages were testet on:
 | Contact Form| User submits information | emailjs sends message to site owner | Works as expected |
 
 <details><summary>Screenshots</summary>
-No screenshots available.
+No screenshots available. But emails are received by site owner.
 </details>
 
 9. As the site owner, I want to provide my contact information to visitors interested in my work
