@@ -129,7 +129,7 @@ The pages were testet on:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| navbar | Toggle navbar, go to any page| get to workshop section | Works as expected |
+| Strategy Guide Page | Go to page via navigation | Receive a number of strategy hints and tips | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/user-stories/userstory-5.png">
@@ -139,9 +139,7 @@ The pages were testet on:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | Click contact form| get to contact form | Works as expected |
-| form | use form for data input| data submitted | Works as expected |
-| strategy | Success page pops up | data has been submitted | Works as expected |
+| About page| Go to page via navigation| Receive a short text explainig the project scope and game logic | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/user-stories/userstory-6.png">
