@@ -38,10 +38,10 @@
 
 [JShint Validator](https://jshint.com/) was used to validate JavaScript scripts.
 
-| Directory | File | Screenshot |
-| --- | --- | --- |
-| assets | [game.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/game.js) | ![screenshot](docs/testing/js/contact.png) |
-| assets | [contact.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/game.js) | ![screenshot_1](docs/testing/js/game-1.png), ![screenshot_2](docs/testing/js/game-2.png), ![screenshot_3](docs/testing/js/game-3.png) |
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| assets | [contact.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/contact.js) | ![screenshot](docs/testing/js/contact.png) | emailjs is called in  |
+| assets | [game.js](https://github.com/n4v1ds0n/tic-tac-toe/blob/main/assets/js/game.js) | ![screenshot_1](docs/testing/js/game-1.png), ![screenshot_2](docs/testing/js/game-2.png), ![screenshot_3](docs/testing/js/game-3.png) | - |
 
 
 ## Accessibility
@@ -118,12 +118,7 @@ The pages were testet on:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Custom-guitar-section | On home page, scroll down to custom-guitar-section | I learn about custom-guitar-service | Works as expected |
-| Customization-section | On home page, scroll down to customization-section | I learn about customization-service | Works as expected |
-| navbar | Toggle navbar, go to "Our Workshop" | get to workshop section | Works as expected |
-| Wood-section | On workshop page, scroll down to woods-section | I learn about woods | Works as expected |
-| Pickup-section | On workshop page, scroll down to pickups-section | I learn about pickups | Works as expected |
-| Hardware-section | On workshop page, scroll down to hardware-section | I learn about hardware | Works as expected |
+| Game Outcome Feedback | Play a game until its over | Receive an outcome alert and the score is updated | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/user-stories/userstory-4-1of2.png">

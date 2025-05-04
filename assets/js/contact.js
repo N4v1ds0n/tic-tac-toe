@@ -1,4 +1,5 @@
 // Initialize EmailJS
+/* global emailjs */
 (function() {
     emailjs.init("vjl9hzvC35RMAst7n");
   })();
